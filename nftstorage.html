@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-- NFT 1.0-->
+    <title  > EasyNFT- Sell your NFT with one click! Ethereum,Binance,Polygon...</title>
+
+
+
+<style type="text/css">
+  
+      .rightIcon{
+        width: : 30px;
+    }
+
+
+    #loader1 {
+  width: 200px;
+  display: none;
+}
+
+    #loader2 {
+  width: 200px;
+  display: none;
+}
+
+
+    #loader3 {
+  width: 200px;
+  display: none;
+}
+
+</style>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Easy NFT <sup>1</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Home</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar Message -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <!--  <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>-->
+                <a class="btn btn-success btn-sm" href="https://dapp404.com/AlgoNetwork/EasyNFt-Bulk-NFt-to-Opensea">Github for more!</a>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search 
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+-->
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+ 
+
+ 
+
+
+
+
+<!-- language -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                                
+                                <img class="img-profile rounded-circle"
+                                    src="img/lang.png">
+                            </a>
+                            
+                            <!--
+<button id="en" class="translate">English</button>
+<button id="zh" class="translate">简体中文</button>
+<button id="ru" class="translate">русский</button> 
+<button id="kr" class="translate">한국어</button> 
+<button id="fa" class="translate">فارسی</button> 
+<button id="jp" class="translate">日本語</button> 
+<button id="th" class="translate">ไทย</button> 
+                            -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a id="en" class="dropdown-item translate" href="#">
+                                    <i  class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    English
+                                </a>
+                                <a id="zh"  class="dropdown-item translate" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
+                                   简体中文
+                                </a>
+
+                                 
+ 
+
+								<a id="ru"  class="dropdown-item translate" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
+                                  русский
+                                </a>
+                                <a id="kr"  class="dropdown-item translate" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
+                                  한국어
+                                </a>
+                           <!--     <div class="dropdown-divider"></div>-->
+                       
+                            </div>
+                              
+                        </li>
+<!-- language -->
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+
+
+
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span  id='CurrentAddress' class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/metamask.png">
+                            </a>
+                            <!-- Dropdown - User Information
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                             -->
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading 
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+-->
+                    <!-- Content Row -->
+                    <div class="row">
+
+
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        
+
+                         
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                       
+  <!-- card1 -->
+                        <div   id="CreateNFTCard" class="col-lg-12 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary lang" key="EasyNFT">Help</h6>
+                                </div>
+
+ 
+                                <div class="card-body">
+
+                         
+<h3>1.Do I have to go to register an API? </h3>
+<h5>It is not required, you can also leave it blank, our API is used by default, and the file is uploaded to our account.If you fill out your API, the file will be uploaded to your nft.storage account. </h5>
+
+<br>
+
+<h3>2.How to get the API?</h3>
+<h5>Register a user on   <a href="https://nft.storage" target="_blank">https://nft.storage </a> ,generate a new free API key </h5>
+<img   src="img/nftstorage.png">
+
+
+<br><br>
+
+<h3>3.Deploy on polygon failed?</h3>
+<h5> Maybe your gas fee not enough,change to aggressive.</h5>
+
+<img   src="img/m1.png"><img   src="img/m2.png">
+
+
+<br><br>
+
+<h3>4.I have created a new NFT Collection,but i can't jump to "Easy NFT Bulk Uploader" page?</h3>
+<h5> refresh the website after 1-2 minutes.</h5>
+
+<br><br>
+
+<h3>4.Do i have to choose the aggresive gas fee?</h3>
+<h5> on the polygon network,yes.  but no need choose aggresive on other blockchain. </h5>
+
+
+
+
+                              
+
+                                 </div>
+                        </div>
+                        </div>
+  <!-- card1 -->
+
+
+
+
+
+                       
+
+
+
+
+                            </div>
+
+                            <!-- Approach 
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                </div>
+                                <div class="card-body">
+                                 <img  src="img/example.png"  >
+                                    <p> </p>
+                                </div>
+                            </div>-->
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Easy NFT 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+   <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins 
+    <script src="vendor/chart.js/Chart.min.js"></script>
+-->
+    <!-- Page level custom scripts
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+ -->
+
+
+   <script src="js/all.min.js"   crossorigin="anonymous"></script>
+    <script src="js/contract.js"></script>
+    <script src="js/FactoryContract.js"></script>
+
+    <script src="js/token.js"></script>
+     <script src="js/config.js"></script>
+      <script src="js/global.js"></script>
+    <!--https://code.jquery.com/jquery-3.5.1.slim.min.js-->
+    <!--<script src="js/jquery-3.5.1.slim.min.js"    integrity=""></script>-->
+    <script src="js/popper.min.js"  integrity=""></script>
+
+    <!--https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js-->
+    <!--<script src="js/bootstrap.min.js"       integrity=""     ></script>-->
+ 
+
+     <script src='js/bignumber.js'></script>
+<script src="js/web3.min.js"></script>
+
+
+ <!--<script src="js/ipfs.js"></script>-->
+ <script type="module" src="https://cdn.jsdelivr.net/npm/nft.storage/dist/bundle.esm.min.js"></script>
+ <!--https://cdn.jsdelivr.net/npm/nft.storage/dist/bundle.esm.min.js-->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>-->
+  
+
+<script type="text/javascript">
+    var arrLang = {
+      'en': {
+        'SiteTitle': 'Bee Sender-ERC20 Token Multi Sender.Packer your multi transfer in one transaction and save your cost.',
+        'Ethereum': 'Ethereum',
+        'Binance': 'Binance',
+        'Huobi': 'Huobi',
+        'Choose your NFT Collection': 'Choose your NFT Collection',
+        'Send same amount to each address': 'Send same amount to each address',
+        'Use CSV file': 'Use CSV file',
+        'Send amount': 'Send amount',
+        'Address list(1-500 addresses)': 'Address list(1-500 addresses)',
+        'Medium gas fee': 'Medium gas fee',
+        'Low gas fee': 'Low gas fee',
+        'EasyNFT': 'Token Multi Sender'
+      },
+      'zh': {
+        'SiteTitle': 'Bee Sender-同时发送代币给多个地址',
+        'Ethereum': '以太坊链',
+        'Binance': '币安链',
+        'Huobi': '火币链',
+        'Choose your NFT Collection': '选择您的NFT系列',
+        'Send same amount to each address': '发送相同数量的代币到每个地址',
+        'Use CSV file': '使用CSV文件',
+        'Send amount': '发送数量',
+        'Address list(1-500 addresses)': '地址列表(1-500个地址,一行一个地址)',
+        'Medium gas fee': '中等Gas费',
+        'Low gas fee': '低Gas费',
+        'EasyNFT': '批量发送代币'
+      },
+
+      'ru': {
+        'SiteTitle': 'Bee Sender-ERC20 Token Multi Sender. Упакуйте мультиперевод в одну транзакцию и сэкономьте на затратах.',
+        'Ethereum': 'Ethereum',
+        'Binance': 'Binance',
+        'Huobi': 'Huobi',
+        'Choose your NFT Collection': 'Адрес токена',
+        'Send same amount to each address': 'Отправить одинаковую сумму на каждый адрес',
+        'Use CSV file': 'Использовать CSV-файл',
+        'Send amount': 'Отправить сумму',
+        'Address list(1-500 addresses)': 'Список адресов (1-500 адресов)',
+        'Medium gas fee': 'Плата за средний газ',
+        'Low gas fee': 'Низкая плата за газ',
+        'EasyNFT': 'Токен MultiSender'
+      },
+
+
+      'kr': {
+        'SiteTitle': 'Bee Sender-ERC20 Token Multi Sender.Packer는 하나의 트랜잭션으로 다중 전송을 수행하고 비용을 절약합니다.',
+        'Ethereum': 'Ethereum',
+        'Binance': 'Binance',
+        'Huobi': 'Huobi',
+        'Choose your NFT Collection': '토큰 주소',
+        'Send same amount to each address': '각 주소로 동일한 금액 보내기',
+        'Use CSV file': 'CSV 파일 사용',
+        'Send amount': '송금 금액',
+        'Address list(1-500 addresses)': '주소 목록(1-500 주소)',
+        'Medium gas fee': '중간 가스 요금',
+        'Low gas fee': '낮은 가스 요금',
+        'EasyNFT': '토큰 다중 전송자'
+      },
+      'fa': {
+ 
+      },
+
+      'jp': {
+ 
+      },
+
+      'th': {
+ 
+      }
+
+    };
+
+    // Process translation
+    $(function() {
+      $('.translate').click(function() {
+        var lang = $(this).attr('id');
+console.log("change language..");
+        $('.lang').each(function(index, item) {
+          $(this).text(arrLang[lang][$(this).attr('key')]);
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
